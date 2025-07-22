@@ -5,6 +5,7 @@ import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { UserDropDown } from "../(protected)/_components/UserDropdown";
 import { authClient } from "@/lib/authClient";
+import { ModeToggle } from "@/components/ui/ModeToggle";
 
 export default function NavBar() {
   const { data: session, isPending } = authClient.useSession();
@@ -60,6 +61,8 @@ export default function NavBar() {
                 </Link>
               </>
             )}
+
+            <ModeToggle />
           </div>
         </nav>
       </div>

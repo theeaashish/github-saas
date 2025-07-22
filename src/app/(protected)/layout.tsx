@@ -1,6 +1,7 @@
 import { SidebarProvider } from "@/components/ui/sidebar";
 import React, { type ReactNode } from "react";
 import { UserDropDown } from "./_components/UserDropdown";
+import AppSidebar from "./_components/AppSidebar";
 
 type Props = {
   children: ReactNode;
@@ -9,7 +10,7 @@ type Props = {
 const layout = ({ children }: Props) => {
   return (
     <SidebarProvider>
-      {/* <AppSidebar /> */}
+      <AppSidebar />
       <main className="m-2 w-full">
         <div className="border-sidebar-border bg-sidebar flex items-center gap-2 rounded-md border p-2 px-4 shadow">
           {/* TODO: search bar */}
